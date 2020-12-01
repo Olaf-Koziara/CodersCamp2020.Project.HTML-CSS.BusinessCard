@@ -130,14 +130,15 @@ body {
 .tileText {
   opacity: 0;
   transition: 0.4s ease-in-out;
-  position: absolute;
+
   font-size: 25px;
   -moz-user-select: none;
   overflow: auto;
 
-  width: 380px;
-  height: 400px;
+  width: 430px;
+  height: 430px;
   padding: 10px;
+  margin: auto;
 }
 .tileImage {
   opacity: 0;
@@ -161,6 +162,15 @@ body {
   font-weight: bold;
   position: absolute;
 }
+.tile-front {
+  opacity: 1;
+  transition: 0.3s;
+}
+.tile-hint {
+  position: absolute;
+  bottom: 40px;
+  right: 70px;
+}
 .hoverable-wrapper {
   margin: auto;
 }
@@ -173,7 +183,7 @@ body {
 .hoverable-wrapper:hover .tile {
   transform: rotateY(180deg);
 }
-.hoverable-wrapper:hover .tileTitle {
+.hoverable-wrapper:hover .tile-front {
   opacity: 0;
 }
 .hoverable-wrapper:hover .tileImage {
