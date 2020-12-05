@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./background.css" />
     <link rel="stylesheet" href="./slider.css" />
+    <link rel="stylesheet" href="./animation.css" />
   </head>
   <body>
     <nav class="top-menu">
@@ -21,9 +22,10 @@
     </nav>
     <div class="main-content-wrapper">
       <div class="tiles-wrapper">
-        <div class="hoverable-wrapper">
+        <div class="tile__wrapper tile__wrapper--hover">
           <div id="first" class="tile">
             <div class="tile-front">
+              <img class="tile__image" src="./assets/react.png" />
               <div class="tileTitle">React developer</div>
               <div class="tile-hint"><img src="assets/001-more.png" /></div>
             </div>
@@ -42,29 +44,27 @@
             </div>
           </div>
         </div>
-        <div class="hoverable-wrapper">
+        <div class="tile__wrapper tile__wrapper--animation">
           <div id="second" class="tile blue">
             <div class="tile-front">
               <div class="tileTitle">Skills</div>
+              <div class="tile__animation">
+                <img src="./assets/styled.png" />
+
+                <img src="./assets/firebase.png" />
+                <img src="./assets/redux.png" />
+                <img src="./assets/react.png" />
+                <img src="./assets/js.png" />
+                <img src="assets/htmlcss.png" />
+                <img src="./assets/vue.png" />
+              </div>
               <div class="tile-hint"><img src="assets/001-more.png" /></div>
             </div>
 
-            <div class="tileText">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-              mollitia debitis odio esse dolores. Impedit ad eum voluptate? Fuga
-              soluta consequuntur blanditiis maxime. Ex cupiditate incidunt
-              accusamus rerum velit amet. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quam, reprehenderit minus. Soluta ipsa aut, hic
-              aspernatur molestias voluptatibus, nostrum eaque nobis quibusdam
-              alias quaerat! At harum ullam dicta ab! Reprehenderit. Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Possimus, dicta
-              officiis magni quis in provident autem. Amet quas nulla illum
-              reprehenderit error sequi ipsa aperiam modi, sunt velit, sapiente
-              quisquam.
-            </div>
+            <div class="tileText"></div>
           </div>
         </div>
-        <div class="hoverable-wrapper">
+        <div class="tile__wrapper">
           <div id="third" class="tile">
             <div class="tile-front">
               <div class="tileTitle">Projects</div>
@@ -86,10 +86,10 @@
             </div>
           </div>
         </div>
-        <div class="hoverable-wrapper">
+        <div class="tile__wrapper tile__wrapper--hover">
           <div id="third" class="tile no-padding">
             <div class="tile-front">
-              <img class="hobbies-image" src="./assets/hobby.jpg" />
+              <img class="tile__image" src="./assets/hobby.jpg" />
               <div class="tileTitle">Hobbies</div>
               <div class="tile-hint"><img src="assets/001-more.png" /></div>
             </div>
