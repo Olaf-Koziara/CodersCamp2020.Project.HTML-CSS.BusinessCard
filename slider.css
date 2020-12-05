@@ -12,9 +12,10 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   overflow-y: hidden;
-
+  border-radius: 5px;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 
   /*
     scroll-snap-points-x: repeat(300px);
@@ -22,8 +23,7 @@
     */
 }
 .slides::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0;
 }
 .slides::-webkit-scrollbar-thumb {
   background: black;
