@@ -1,0 +1,57 @@
+.tile__animation {
+  position: relative;
+  list-style: none;
+  height: 460px;
+}
+.tile__animation img {
+  position: absolute;
+  transition: 0.6s ease-in-out;
+}
+.tile__animation img:nth-child(1) {
+  width: 65px;
+  bottom: 0;
+  left: -1px;
+}
+.tile__animation img:nth-child(2) {
+  width: 80px;
+
+  bottom: 60px;
+  left: 45px;
+}
+.tile__animation img:nth-child(3) {
+  width: 85px;
+
+  bottom: 120px;
+  left: 110px;
+}
+.tile__animation img:nth-child(4) {
+  width: 120px;
+
+  bottom: 170px;
+  left: 170px;
+}
+.tile__wrapper--animation:hover .tile__animation img:nth-child(4) {
+  transform: translateY(-140px) translateX(-30px);
+}
+.tile__animation img:nth-child(5) {
+  width: 65px;
+
+  bottom: 120px;
+  right: 110px;
+}
+.tile__animation img:nth-child(6) {
+  width: 95px;
+
+  bottom: 45px;
+  right: 60px;
+}
+.tile__animation img:nth-child(7) {
+  width: 65px;
+
+  bottom: 5px;
+  right: 15px;
+  transform: rotate(-10deg);
+}
+.tile__wrapper--animation:hover .tile__animation img:nth-child(1) {
+  transform: translateY(-350px);
+}
