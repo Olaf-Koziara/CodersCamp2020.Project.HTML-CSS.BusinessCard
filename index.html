@@ -11,23 +11,26 @@
   </head>
   <body>
     <nav class="top-menu">
-      <a href="" class="d-flex">
-        <img class="logo my-auto" src="assets/logo.png" alt="logo" />
-        <div class="logo-text-wrapper">Web-lab</div>
-      </a>
+      <div class="profile">
+        <img class="profile__image my-auto" src="assets/profile.PNG" />
+        <div class="profile__text my-auto">Olaf Koziara</div>
+      </div>
 
-      <button class="contact-button my-auto">
-        <a href="contact.html">Contact me</a>
-      </button>
+      <div class="d-flex">
+        <img class="logo my-auto" src="assets/labLogo.png" alt="logo" />
+        <button class="contact-button my-auto">
+          <a href="contact.html">Contact me</a>
+        </button>
+      </div>
     </nav>
     <div class="main-content-wrapper">
       <div class="tiles-wrapper">
         <div class="tile__wrapper tile__wrapper--hover">
           <div id="first" class="tile">
-            <div class="tile-front">
+            <div class="tile__front">
               <img class="tile__image" src="./assets/react.png" />
-              <div class="tileTitle">React developer</div>
-              <div class="tile-hint"><img src="assets/001-more.png" /></div>
+              <div class="tile__title">React developer</div>
+              <div class="tile__hint"><img src="assets/001-more.png" /></div>
             </div>
             <div class="tileText">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
@@ -46,57 +49,65 @@
         </div>
         <div class="tile__wrapper tile__wrapper--animation">
           <div id="second" class="tile blue">
-            <div class="tile-front">
-              <div class="tileTitle">Skills</div>
-              <div class="tile__animation">
-                <img src="./assets/styled.png" />
+            <div class="tile__front">
+              <div class="tile__title">Skills</div>
+              <div class="tile__animation-wrapper">
+                <div>
+                  styled components
 
-                <img src="./assets/firebase.png" />
-                <img src="./assets/redux.png" />
-                <img src="./assets/react.png" />
-                <img src="./assets/js.png" />
-                <img src="assets/htmlcss.png" />
-                <img src="./assets/vue.png" />
+                  <img src="./assets/styled.png" />
+                </div>
+                <div class="skill__wrapper">
+                  firebase
+
+                  <img src="./assets/firebase.png" />
+                </div>
+                <div class="skill__wrapper">
+                  redux
+                  <img src="./assets/redux.png" />
+                </div>
+                <div class="skill__wrapper">
+                  react
+                  <img src="./assets/react.png" />
+                </div>
+
+                <div class="skill__wrapper">
+                  java-script
+                  <img src="./assets/js.png" />
+                </div>
+                <div class="skill__wrapper">
+                  html/css
+                  <img src="assets/htmlcss.png" />
+                </div>
+                <div>vue.js <img src="./assets/vue.png" /></div>
               </div>
-              <div class="tile-hint"><img src="assets/001-more.png" /></div>
+              <div class="tile__hint"><img src="assets/001-more.png" /></div>
             </div>
 
             <div class="tileText"></div>
           </div>
         </div>
-        <div class="tile__wrapper">
+        <div class="tile__wrapper tile__wrapper--hover">
           <div id="third" class="tile">
-            <div class="tile-front">
-              <div class="tileTitle">Projects</div>
-              <div class="tile-hint"><img src="assets/001-more.png" /></div>
+            <div class="tile__front">
+              <div class="tile__title">Projects</div>
+              <div class="tile__hint"><img src="assets/001-more.png" /></div>
             </div>
 
-            <div class="tileText">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-              mollitia debitis odio esse dolores. Impedit ad eum voluptate? Fuga
-              soluta consequuntur blanditiis maxime. Ex cupiditate incidunt
-              accusamus rerum velit amet. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quam, reprehenderit minus. Soluta ipsa aut, hic
-              aspernatur molestias voluptatibus, nostrum eaque nobis quibusdam
-              alias quaerat! At harum ullam dicta ab! Reprehenderit. Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. Possimus, dicta
-              officiis magni quis in provident autem. Amet quas nulla illum
-              reprehenderit error sequi ipsa aperiam modi, sunt velit, sapiente
-              quisquam.
-            </div>
+            <div class="tileText"></div>
           </div>
         </div>
         <div class="tile__wrapper tile__wrapper--hover">
           <div id="third" class="tile no-padding">
-            <div class="tile-front">
+            <div class="tile__front">
               <img class="tile__image" src="./assets/hobby.jpg" />
-              <div class="tileTitle">Hobbies</div>
-              <div class="tile-hint"><img src="assets/001-more.png" /></div>
+              <div class="tile__title">Hobbies</div>
+              <div class="tile__hint"><img src="assets/001-more.png" /></div>
             </div>
 
             <div class="tileImage">
               <div class="slider">
-                <div class="menu-wrapper">
+                <div class="slider__menu-wrapper">
                   <a href="#slide-1">1</a>
                   <a href="#slide-2">2</a>
                   <a href="#slide-3">3</a>
