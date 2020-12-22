@@ -80,7 +80,7 @@
   height: 100%;
 }
 
-.menu-wrapper > a {
+.slider__menu-wrapper > a {
   display: inline-flex;
   width: 1.5rem;
   height: 1.5rem;
@@ -94,7 +94,7 @@
   z-index: 4;
 }
 
-.menu-wrapper {
+.slider__menu-wrapper {
   transform: translate(-50%);
   position: absolute;
   top: 5px;
