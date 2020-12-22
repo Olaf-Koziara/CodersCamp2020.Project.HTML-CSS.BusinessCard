@@ -39,11 +39,6 @@ body {
   display: flex;
   position: relative;
 
-  /* background-image: linear-gradient(
-    360deg,
-    rgba(0, 76, 103, 0.9) -28.58%,
-    rgba(0, 168, 198, 0.7) 93.05%
-  ); */
   justify-content: space-between;
   background-color: var(--main);
   padding: 100px 60px;
@@ -65,7 +60,7 @@ body {
 .profile__text {
   height: 30px;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .contact-button {
@@ -113,6 +108,12 @@ textarea {
   width: 256px;
   height: 207px;
   z-index: 1;
+  display: none;
+}
+@media only screen and (min-width: 900px) {
+  .logo {
+    display: block;
+  }
 }
 .logo-text-wrapper {
   margin: auto 0;
