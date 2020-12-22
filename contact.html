@@ -10,19 +10,26 @@
   </head>
   <body>
     <nav class="top-menu">
-      <img class="overlay" src="./assets/overlay.png" alt="overlay" />
-      <img class="bubbles" src="./assets/bubbles.png" alt="bubbles" />
+      <div class="profile">
+        <img class="profile__image my-auto" src="assets/profile.PNG" />
+        <div class="profile__text my-auto">Olaf Koziara</div>
+      </div>
 
-      <a href="index.html" class="d-flex">
-        <img class="logo my-auto" src="assets/logo.png" alt="logo" />
-        <div class="logo-text-wrapper">Web-lab</div>
-      </a>
-
-      <button class="contact-button my-auto">
-        <a href="contact.html"> Contact me</a>
-      </button>
+      <div class="d-flex">
+        <img class="logo my-auto" src="assets/labLogo.png" alt="logo" />
+        <button class="contact-button my-auto">
+          <a href="index.html">Home</a>
+        </button>
+      </div>
     </nav>
-    <div class="main-content-wrapper"></div>
+    <div class="main-content-wrapper">
+      <form class="contact-form">
+        <h1>Contact</h1>
+        <input placeholder="e-mail" name="e-mail" />
+        <textarea placeholder="message" name="message"></textarea>
+        <button class="contact-form__submit" type="submit">Send</button>
+      </form>
+    </div>
     <div class="area">
       <ul class="circles">
         <li></li>
