@@ -261,7 +261,7 @@ textarea {
 }
 .skill-list-item {
   border-radius: 4px;
-  background-color: #e6e6e6;
+  background-color: var(--main);
   margin: 10px;
   padding: 30px;
 }
