@@ -6,8 +6,21 @@
   scroll-behavior: smooth;
   --main: rgba(0, 192, 226, 0.9);
   --rounded: 10px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+.d-flex {
+  display: flex;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
 a {
   text-decoration: none;
   color: black;
@@ -33,30 +46,69 @@ body {
   ); */
   justify-content: space-between;
   background-color: var(--main);
-
+  padding: 100px 60px;
   height: 400px;
 }
 .top-menu > button {
   font-family: "Montserrat", sans-serif;
 }
-.d-flex {
+.profile {
+  height: 200px;
   display: flex;
+  gap: 30px;
 }
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.profile__image {
+  height: 150px;
+  border-radius: 100px;
+  width: 162px;
 }
+.profile__text {
+  height: 30px;
+  color: white;
+  font-size: 30px;
+}
+
 .contact-button {
   border: 1px solid white;
   border-radius: 5px;
   background-color: transparent;
-  height: 50px;
+  min-height: 50px;
+  max-height: 70px;
   margin-right: 60px;
   cursor: pointer;
   color: white;
+  padding: 5px;
 
   font-size: 20px;
 }
+.contact-form {
+  display: block;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.contact-form input,
+textarea {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 5px auto;
+  padding: 1.5rem 2rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+.contact-form__submit {
+  border: 0;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
 .logo {
   width: 256px;
   height: 207px;
@@ -68,6 +120,7 @@ body {
   font-size: 50px;
   z-index: 1;
 }
+
 .overlay {
   position: absolute;
   left: 0;
@@ -122,7 +175,7 @@ body {
 #third.tile {
   animation: mymove 1s ease-in-out 600ms forwards;
 }
-/* #third .tile-front {
+/* #third .tile__front {
   background-image: url("./assets/hobby.jpg");
   background-size: contain;
   width: 460px;
@@ -166,7 +219,7 @@ body {
 .tileImage img {
   border-radius: 10px;
 }
-.tileTitle {
+.tile__title {
   transition: 0.4s ease-in-out;
   opacity: 1;
   left: 50%;
@@ -179,17 +232,25 @@ body {
   font-weight: bold;
   position: absolute;
 }
-.tile-front {
+.tile__front {
   opacity: 1;
   transition: 0.3s;
 }
-.tile-hint {
+.tile__hint {
   position: absolute;
   bottom: 40px;
   right: 70px;
   transition: 0.3s;
 }
-
+.skill__wrapper span {
+  color: white;
+  height: 20px;
+  display: inline-block;
+  border-bottom: 1px solid white;
+}
+.skill__wrapper {
+  text-align: center;
+}
 .tile__wrapper {
   margin: auto;
 }
@@ -202,10 +263,10 @@ body {
 .tile__wrapper--hover:hover .tile {
   transform: rotateY(180deg);
 }
-.tile__wrapper--hover:hover .tile-front {
+.tile__wrapper--hover:hover .tile__front {
   opacity: 0;
 }
-.tile__wrapper--hover:hover .tile-hint {
+.tile__wrapper--hover:hover .tile__hint {
   transform: scale(2);
 }
 .tile__wrapper--hover:hover .tileImage {
@@ -222,4 +283,163 @@ body {
   background-color: rgba(0, 168, 198, 0.7); /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 3px solid #f0eff4; /* creates padding around scroll thumb */
+}
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.login-box a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.login-box a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.login-box a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.login-box a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
